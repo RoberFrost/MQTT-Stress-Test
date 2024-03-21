@@ -91,6 +91,28 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
     ./get_helm.sh
 ```
 
+Installazione k9s
+
+Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente dalla riga di comando:
+```
+   sudo apt update
+
+   sudo apt install snapd
+```
+Riavviamo il dispositivo
+```
+   sudo reboot
+```
+Successivamente, installare lo snap core per ottenere l'ultima versione di snapd:
+```
+   sudo snap install core
+```
+Per installare k9s, utilizza semplicemente il seguente comando:
+```
+   sudo snap install k9s
+
+```
+
 ### Grafana
 
 Installare su rasberry esterna al cluster come dashboard di monitoraggio.
