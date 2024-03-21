@@ -95,24 +95,23 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
 
 Installare su rasberry esterna al cluster come dashboard di monitoraggio.
 ```
-     wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+     sudo mkdir -p /etc/apt/keyrings/
 
-     echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+     wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
 
-     sudo apt-get update && sudo apt-get install grafana
+     echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
 
-     
+     sudo apt-get update
 
-     sudo systemctl daemon-reload
+     sudo apt-get install -y grafana
 
-     sudo systemctl start grafana-server
+     sudo /bin/systemctl enable grafana-server
 
-     sudo systemctl status grafana-server
-
-     sudo systemctl enable grafana-server.service
+     sudo /bin/systemctl start grafana-server
  
 ``` 
-
+Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipaddress>:3000"
+<ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
 
 
 ### TimescaDB
