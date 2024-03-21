@@ -82,7 +82,7 @@ Una volta completata l’installazione del nodo Kubernetes, procederemo ad insta
 - grafana
 
 
-### prerequisiti
+### Prerequisiti
 
 Installazione Helm (versione >= 3.14.3) sulla macchina:
 ```
@@ -91,7 +91,7 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
     ./get_helm.sh
 ```
 
-Installazione k9s
+INSTALLAZIONE K9S
 
 Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente dalla riga di comando:
 ```
