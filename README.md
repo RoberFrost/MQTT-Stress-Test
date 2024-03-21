@@ -25,22 +25,7 @@ Ricordare di assegnare un indirizzo IP statico anche sul router.
 14.	Installare Grafana. Per prima cosa importiamo i pacchetti contenenti i file di installazione del     plugin, con i comandi “sudo mkdir -p /etc/apt/keyrings/” e il comando “wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null”. Successivamente importare la repository, la directory, di Grafana con il comando “echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list”. Ora possiamo procedere ad installare Grafana sul nostro dispositivo, utilizzando i comandi “sudo apt-get update” e “sudo apt-get install -y grafana”. 
 Una volta completata l’installazione, procediamo ad abilitare il server Grafana con il comando “sudo /bin/systemctl enable grafana-server” e avviamolo con “sudo /bin/systemctl start grafana-server”. Per accedere alla GUI di Grafana, ora basta andare sul nostro browser, digitare l’indirizzo IP del nostro dispositivo, in questo caso della Raspberry e digitare “http://<ip address>:3000”
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## CASO D'USO
 Il caso di studio consiste nel simulare l’invio di un determinato numero di messaggi MQTT al nostro Nodo Kubernetes, che utilizzerà una versione “light” di Kubernetes, K3s. Così facendo, verrà valutata la resilienza e l’affidabilità di questo Nodo. Tutti i dati inviati dal simulatore (Nome simulatore) verranno poi analizzati e fatto un report dal plugin Telegraf. Così facendo, avremo modo di vedere l’efficienza di questo nodo Kubernetes in edge. L’hardware che utilizzeremo sarà una Raspberry Pi 4 Model B da 4GB di RAM. 
 
 Hardware utilizzato: Raspberry Pi 4 – Memory Card da 16 GB.
@@ -87,3 +72,21 @@ Ora possiamo procedere ad installare il Master Node di Kubernetes, con il comand
 Una volta completata l’installazione, si avvierà in automatico il server K3s. Per verificare la corretta esecuzione, basterà utilizzare il comando “Kubectl get nodes”.
 
 Una volta completata l’installazione del nodo Kubernetes, procederemo ad installare i vari plugin che utilizzeremo. Iniziamo dal broker MQTT, Mosquitto. Utilizziamo il comando “sudo apt-get install mosquitto” per installare il nostro broker MQTT. Una volta installato possiamo verificare l’effettiva installazione e funzionamento con il comando “sudo service mosquitto status”. Se nella sezione “Active” troviamo in verde “Active, running” allora significa che il nostro broker MQTT funziona correttamente.
+
+
+## TOOLS
+
+- mosquitto
+- telegraf
+- timescaleDB
+- grafana
+
+
+### prerequisiti
+
+Installazione Helm (versione >= 3.14.3) sulla macchina:
+```
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+```
