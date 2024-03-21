@@ -121,11 +121,11 @@ Database noSQL timeseries. Entrare nella cartella *deployments/timescaledb* ed e
 
 Install command
 ``` 
-    ./install
+    ./install.sh
 ```
 Uninstall command
 ``` 
-    ./install rm
+    ./install.sh rm
 ```
 
 ### Mqtt Mosquitto
