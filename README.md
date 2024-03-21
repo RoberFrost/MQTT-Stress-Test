@@ -90,3 +90,28 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
     chmod 700 get_helm.sh
     ./get_helm.sh
 ```
+
+### Grafana
+
+Installare su rasberry esterna al cluster come dashboard di monitoraggio.
+``` 
+``` 
+
+
+
+### TimescaDB
+
+Database noSQL timeseries. Entrare nella cartella *deployments/timescaledb* ed eseguire i seguenti comandi:
+
+Install command
+``` 
+    ./install
+```
+Uninstall command
+``` 
+    ./install rm
+```
+
+### Mqtt Mosquitto
+
+Open source MQTT broker. Progettato per il protocollo MQTT, un protocollo di messaggistica leggero per piccoli sensori e dispositivi mobili

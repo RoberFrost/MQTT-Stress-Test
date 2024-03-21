@@ -56,7 +56,7 @@ auth:
     username: admin
     ## @param auth.admin.password InfluxDB&trade; admin user's password
     ##
-    password: "admin"
+    password: "admin1234!"
     ## @param auth.admin.token InfluxDB&trade; admin user's token. Only valid with InfluxDB&trade; v2
     ##
     token: ""
