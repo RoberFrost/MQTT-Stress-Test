@@ -1,4 +1,4 @@
-### GUIDA INSTALLAZIONE k3s SULLA RASPBERRY UTILIZZATA PER IL CASO DI STUDIO.
+# GUIDA INSTALLAZIONE k3s SULLA RASPBERRY UTILIZZATA PER IL CASO DI STUDIO.
 
 1. Effettuare l'installazione del sistema operativo sulla Raspberry, utilizzando il tool gratuito Raspberry Pi Imager offerto dal produttore del dispositivo.
 2. Ricordarsi di abilitare il protocollo SSH, in quanto necessario per la comunicazione con altri dispositivi.
@@ -25,7 +25,7 @@ static domain_name_servers=8.8.8.8
 ```
 Assicurarsi di assegnare un indirizzo IP statico anche sul router.
 
-N.B. In questo caso di studio, utilizzeremo la porta LAN integrata sul dispositivo, quindi utilizzeremo l'interfaccia "lan0" ma essendo che il dispositivo ha a disposizione anche un'interfaccia Wifi, si può utilizzare l'interfaccia "wlan0".
+### N.B. In questo caso di studio, utilizzeremo la porta LAN integrata sul dispositivo, quindi utilizzeremo l'interfaccia "lan0" ma essendo che il dispositivo ha a disposizione anche un'interfaccia Wifi, si può utilizzare l'interfaccia "wlan0".
 
 7. Installare le tavole IP (IP Tables) con i comandi:
 ```
