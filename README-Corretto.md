@@ -106,23 +106,31 @@ Completata l'installazione, procediamo al prossimo plugin.
 
 Andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
 
-Avvieremo i comandi: 
+Avvieremo i seguenti comandi: 
+
+Creiamo la directory di installazione con:
 ```
      sudo mkdir -p /etc/apt/keyrings/
-
+```
+Importiamo il pacchetto di installazione del plugin con:
+```
      wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
-
+```
+Importiamo la repository di Grafana con:
+```
      echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
-
+```
+Aggiorniamo il sistema e installiamo Grafana con:
+```
      sudo apt-get update
-
      sudo apt-get install -y grafana
-
+```
+Abilitiamo e avviamo il server Grafana con:
+```
      sudo /bin/systemctl enable grafana-server
+     sudo /bin/systemctl start grafana-server 
+```
 
-     sudo /bin/systemctl start grafana-server
- 
-``` 
 Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipaddress>:3000"
 <ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
 
