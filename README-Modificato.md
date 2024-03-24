@@ -95,6 +95,8 @@ Completata l'installazione di Helm, procediamo al prossimo prerequisito, Timesca
 
 TimescaleDB è un database open source per serie temporali, è anche un database relazionale e supporta query SQL standard. Funzioni SQL aggiuntive e strutture di tabelle forniscono supporto per i dati di serie temporali orientati allo storage, alle prestazioni e alle analisi per i dati su scala.
 
+#  ❓ BISOGNA RIPORTARE ANCHE LO SCRIPT?? ❓
+
 Avvieremo il comando di installazione dello script del database, entrando innanzitutto nella directory **"deployments/timescaledb"** e avviando il comando:
 ``` 
     ./install.sh
