@@ -104,7 +104,7 @@ Avvieremo il comando di installazione dello script del database, entrando innanz
 Completata l'installazione, procediamo al prossimo plugin.
 
 
-Andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
+### Ora andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
 
 Avvieremo i seguenti comandi: 
 
