@@ -82,6 +82,9 @@ kubectl get nodes
 
 Una volta completata l’installazione del nodo Kubernetes, procederemo ad installare i vari plugin che utilizzeremo.
 
+Andremo
+
+
 # COMANDI UTILIZZATI PER L'INSTALLAZIONE
 
 ## Cgroups:
@@ -158,3 +161,82 @@ oppure:
 ```
 sudo k3s kubectl get node
 ```
+
+# TOOLS
+
+- mosquitto
+- telegraf
+- timescaleDB
+- grafana
+
+
+### Prerequisiti
+
+Installazione Helm (versione >= 3.14.3) sulla macchina:
+```
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+```
+
+INSTALLAZIONE K9S
+
+Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente dalla riga di comando:
+```
+   sudo apt update
+
+   sudo apt install snapd
+```
+Riavviamo il dispositivo
+```
+   sudo reboot
+```
+Successivamente, installare lo snap core per ottenere l'ultima versione di snapd:
+```
+   sudo snap install core
+```
+Per installare k9s, utilizza semplicemente il seguente comando:
+```
+   sudo snap install k9s
+
+```
+
+### Grafana
+
+Installare su rasberry esterna al cluster come dashboard di monitoraggio.
+```
+     sudo mkdir -p /etc/apt/keyrings/
+
+     wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+
+     echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+
+     sudo apt-get update
+
+     sudo apt-get install -y grafana
+
+     sudo /bin/systemctl enable grafana-server
+
+     sudo /bin/systemctl start grafana-server
+ 
+``` 
+Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipaddress>:3000"
+<ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
+
+
+### TimescaDB
+
+Database noSQL timeseries. Entrare nella cartella *deployments/timescaledb* ed eseguire i seguenti comandi:
+
+Install command
+``` 
+    ./install.sh
+```
+Uninstall command
+``` 
+    ./install.sh rm
+```
+
+### Mqtt Mosquitto
+
+Open source MQTT broker. Progettato per il protocollo MQTT, un protocollo di messaggistica leggero per piccoli sensori e dispositivi mobili
