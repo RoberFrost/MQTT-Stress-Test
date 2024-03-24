@@ -82,7 +82,7 @@ kubectl get nodes
 
 Una volta completata l’installazione del nodo Kubernetes, procederemo ad installare i vari plugin che utilizzeremo.
 
-Come primo e più importante, andremo ad installare Helm, prerequisito importante per il funzionamento del nostro Nodo. Helm è uno strumento che automatizza la creazione, l'impacchettamento, la configurazione e il rilascio delle applicazioni Kubernetes combinando i file di configurazione in un unico pacchetto.
+Come primo e più importante, andremo ad installare Helm, prerequisito importante per il funzionamento del nostro Nodo. Helm è uno strumento open-source per la gestione dei pacchetti e il deployment delle applicazioni Kubernetes. Consente di definire, installare e aggiornare facilmente le applicazioni Kubernetes utilizzando modelli chiamati "charts". I charts sono pacchetti preconfigurati contenenti tutte le risorse necessarie per eseguire un'applicazione su Kubernetes, inclusi deployment, service, ingress e altre risorse Kubernetes.
 
 Utilizzeremo il comando:
 ```
@@ -93,15 +93,15 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 
 Completata l'installazione di Helm, procediamo al prossimo prerequisito, TimescaleDB.
 
-TimescaleDB è un database open source per serie temporali, è anche un database relazionale e supporta query SQL standard. Funzioni SQL aggiuntive e strutture di tabelle forniscono supporto per i dati di serie temporali orientati allo storage, alle prestazioni e alle analisi per i dati su scala.
+TimescaleDB è un database di serie temporali open-source progettato per gestire in modo efficiente grandi volumi di dati temporali. Offre caratteristiche avanzate come l'architettura scalabile, la compressione dei dati, il partizionamento automatico e il supporto per dati geospaziali. 
 
-#  ❓ BISOGNA RIPORTARE ANCHE LO SCRIPT?? ❓
+###  ❓ BISOGNA RIPORTARE ANCHE LO SCRIPT?? ❓
 
 Avvieremo il comando di installazione dello script del database, entrando innanzitutto nella directory **"deployments/timescaledb"** e avviando il comando:
 ``` 
     ./install.sh
 ```
-
+Completata l'installazione, procediamo al prossimo plugin.
 
 
 Andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
@@ -243,7 +243,6 @@ Successivamente, installare lo snap core per ottenere l'ultima versione di snapd
 Per installare k9s, utilizza semplicemente il seguente comando:
 ```
    sudo snap install k9s
-
 ```
 
 ### Grafana
