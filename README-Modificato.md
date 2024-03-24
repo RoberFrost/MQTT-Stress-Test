@@ -1,4 +1,4 @@
-### Guida installazione k3s sulla Raspberry utilizzata per il caso di studio.
+### GUIDA INSTALLAZIONE k3s SULLA RASPBERRY UTILIZZATA PER IL CASO DI STUDIO.
 
 1. Effettuare l'installazione del sistema operativo sulla Raspberry, utilizzando il tool gratuito Raspberry Pi Imager offerto dal produttore del dispositivo.
 2. Ricordarsi di abilitare il protocollo SSH, in quanto necessario per la comunicazione con altri dispositivi.
