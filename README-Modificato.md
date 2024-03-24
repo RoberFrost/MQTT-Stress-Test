@@ -89,11 +89,13 @@ Una volta completata l’installazione del nodo Kubernetes, procederemo ad insta
 cgroup_memory=1 cgroup_enable=memory
 ```
 
+
 ## Abilitazione kernel in modalità 64-bit 
 ```
 arm_64bit=1
 ```
 ### Modificare l'indirizzamento IP:
+
 
 ```
 interface lan0
@@ -101,6 +103,7 @@ static ip_address=192.168.1.70
 static routers=192.168.1.254
 static domain_name_servers=8.8.8.8
 ```
+
 
 ### Installazione IP Tables:
 ```
@@ -110,11 +113,13 @@ sudo iptables –F
 sudo update-alternatives –set ip6tables /usr/sbin/ip6tables-legacy
 ```
 
+
 ### Cambio hostname:
 ```
 sudo vi /etc/hostname
 sudo vi /etc/hosts
 ```
+
 
 ### Aggiornamento del sistema operativo:
 
@@ -122,10 +127,12 @@ sudo vi /etc/hosts
 sudo apt update && sudo apt upgrade
 ```
 
+
 ### Riavvio della Raspberry per applicare le modifiche:
 ```
 sudo reboot
 ```
+
 
 ### Disabilitazione swap:
 ```
@@ -136,10 +143,12 @@ Aprire il file "/etc/dphys-swapfile" e modificare
 CONF_SWAPSIZE=0
 ```
 
+
 ### Installazione K3s:
 ```
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --disable=traefik --write-kubeconfig-mode=644" sh -s -
 ```
+
 
 ### Verificare il corretto funzionamento del Master Node Kubernetes:
 ```
