@@ -94,7 +94,7 @@ cgroup_memory=1 cgroup_enable=memory
 ```
 arm_64bit=1
 ```
-### Modificare l'indirizzamento IP:
+## Modificare l'indirizzamento IP:
 
 
 ```
@@ -105,7 +105,7 @@ static domain_name_servers=8.8.8.8
 ```
 
 
-### Installazione IP Tables:
+## Installazione IP Tables:
 ```
 sudo iptables –F
 sudo apt install iptables
@@ -114,27 +114,27 @@ sudo update-alternatives –set ip6tables /usr/sbin/ip6tables-legacy
 ```
 
 
-### Cambio hostname:
+## Cambio hostname:
 ```
 sudo vi /etc/hostname
 sudo vi /etc/hosts
 ```
 
 
-### Aggiornamento del sistema operativo:
+## Aggiornamento del sistema operativo:
 
 ```
 sudo apt update && sudo apt upgrade
 ```
 
 
-### Riavvio della Raspberry per applicare le modifiche:
+## Riavvio della Raspberry per applicare le modifiche:
 ```
 sudo reboot
 ```
 
 
-### Disabilitazione swap:
+## Disabilitazione swap:
 ```
 sudo swapoff –a
 ```
@@ -144,13 +144,13 @@ CONF_SWAPSIZE=0
 ```
 
 
-### Installazione K3s:
+## Installazione K3s:
 ```
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --disable=traefik --write-kubeconfig-mode=644" sh -s -
 ```
 
 
-### Verificare il corretto funzionamento del Master Node Kubernetes:
+## Verificare il corretto funzionamento del Master Node Kubernetes:
 ```
 kubectl get nodes
 ```
