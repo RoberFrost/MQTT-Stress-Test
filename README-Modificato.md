@@ -8,7 +8,7 @@ Innanzitutto, andremo ad installare sulla Memory Card che utilizzeremo all’int
 
 Ora avremo accesso alla nostra Raspberry, avremo questo testo su schermo: “nomedispositivo”@”nomeutente”:~ $
 
-Una volta fatto l’accesso tramite SSH, procediamo subito ad apportare delle modifiche importanti. Innanzitutto andremo a modificare il file #“cmdline.txt” presente nella cartella “boot” e aggiungendo alla fine del testo di questo documento la seguente stringa: 
+Una volta fatto l’accesso tramite SSH, procediamo subito ad apportare delle modifiche importanti. Innanzitutto andremo a modificare il file ###“cmdline.txt” presente nella cartella “boot” e aggiungendo alla fine del testo di questo documento la seguente stringa: 
 ```
 cgroup_memory=1 cgroup_enable=memory
 ```
