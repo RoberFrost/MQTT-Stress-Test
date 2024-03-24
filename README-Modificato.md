@@ -82,7 +82,50 @@ kubectl get nodes
 
 Una volta completata l’installazione del nodo Kubernetes, procederemo ad installare i vari plugin che utilizzeremo.
 
-Andremo
+Come primo e più importante, andremo ad installare Helm, prerequisito importante per il funzionamento del nostro Nodo. Helm è uno strumento che automatizza la creazione, l'impacchettamento, la configurazione e il rilascio delle applicazioni Kubernetes combinando i file di configurazione in un unico pacchetto.
+
+Utilizzeremo il comando:
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+```
+
+Completata l'installazione di Helm, procediamo al prossimo prerequisito, TimescaleDB.
+
+TimescaleDB è un database open source per serie temporali, è anche un database relazionale e supporta query SQL standard. Funzioni SQL aggiuntive e strutture di tabelle forniscono supporto per i dati di serie temporali orientati allo storage, alle prestazioni e alle analisi per i dati su scala.
+
+Avvieremo il comando di installazione dello script del database, entrando innanzitutto nella directory **"deployments/timescaledb"** e avviando il comando:
+``` 
+    ./install.sh
+```
+
+
+
+Andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
+
+Avvieremo il comando: 
+```
+     sudo mkdir -p /etc/apt/keyrings/
+
+     wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+
+     echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+
+     sudo apt-get update
+
+     sudo apt-get install -y grafana
+
+     sudo /bin/systemctl enable grafana-server
+
+     sudo /bin/systemctl start grafana-server
+ 
+``` 
+Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipaddress>:3000"
+<ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
+
+
+
 
 
 # COMANDI UTILIZZATI PER L'INSTALLAZIONE
@@ -179,7 +222,7 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
     ./get_helm.sh
 ```
 
-INSTALLAZIONE K9S
+## INSTALLAZIONE K9S
 
 Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente dalla riga di comando:
 ```
