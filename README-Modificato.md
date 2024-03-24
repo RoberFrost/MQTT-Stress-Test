@@ -122,7 +122,7 @@ sudo vi /etc/hosts
 sudo apt update && sudo apt upgrade
 ```
 
-### Riavviare la Raspberry per applicare le modifiche:
+### Riavvio della Raspberry per applicare le modifiche:
 ```
 sudo reboot
 ```
