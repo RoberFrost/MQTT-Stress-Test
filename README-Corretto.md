@@ -87,8 +87,10 @@ Come primo e più importante, andremo ad installare Helm, prerequisito important
 Utilizzeremo il comando:
 ```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-    chmod 700 get_helm.sh
-    ./get_helm.sh
+
+chmod 700 get_helm.sh
+
+./get_helm.sh
 ```
 
 Completata l'installazione di Helm, procediamo al prossimo prerequisito, TimescaleDB.
