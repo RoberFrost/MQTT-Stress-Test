@@ -164,13 +164,13 @@ sudo k3s kubectl get node
 
 # TOOLS
 
-- mosquitto
-- telegraf
-- timescaleDB
-- grafana
+- Mosquitto
+- Telegraf
+- TimescaleDB
+- Grafana
 
 
-### Prerequisiti
+## Prerequisiti
 
 Installazione Helm (versione >= 3.14.3) sulla macchina:
 ```
@@ -224,7 +224,7 @@ Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipa
 <ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
 
 
-### TimescaDB
+### TimescaleDB
 
 Database noSQL timeseries. Entrare nella cartella *deployments/timescaledb* ed eseguire i seguenti comandi:
 
@@ -237,6 +237,6 @@ Uninstall command
     ./install.sh rm
 ```
 
-### Mqtt Mosquitto
+### MQTT Mosquitto
 
 Open source MQTT broker. Progettato per il protocollo MQTT, un protocollo di messaggistica leggero per piccoli sensori e dispositivi mobili
