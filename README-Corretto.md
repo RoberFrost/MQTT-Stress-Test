@@ -106,7 +106,7 @@ Completata l'installazione, procediamo al prossimo plugin.
 
 Andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
 
-Avvieremo il comando: 
+Avvieremo i comandi: 
 ```
      sudo mkdir -p /etc/apt/keyrings/
 
