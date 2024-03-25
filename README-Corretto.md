@@ -236,7 +236,7 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
 
 ## INSTALLAZIONE K9S
 
-Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente dalla riga di comando:
+Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente da riga di comando:
 ```
    sudo apt update
 
