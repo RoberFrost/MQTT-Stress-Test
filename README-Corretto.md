@@ -236,24 +236,32 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
 
 ## INSTALLAZIONE K9S
 
-Sul Raspberry aggiornarlo all'ultima versione e successivamente, Snap può essere installato direttamente da riga di comando:
+Dalla Raspberry, tramite terminale scarichiamo il file binario K9s per l'architettura ARM eseguendo il comando:
 ```
-   sudo apt update
+wget https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_arm64.tar.gz
+```
 
-   sudo apt install snapd
+Dopo aver scaricato il file tar.gz, estrailo utilizzando il comando:
+Questo comando decomprimerà il file estraendone il contenuto nella directory corrente.
 ```
-Riavviamo il dispositivo
+   tar -xzvf k9s_Linux_arm64.tar.gz
 ```
-   sudo reboot
+
+Successivamente sposteremo il binario K9s in una directory appropriata del sistema. Nel nostro caso, la sposteremo nella directory "/usr/local/bin", eseguendo il comando:
 ```
-Successivamente, installare lo snap core per ottenere l'ultima versione di snapd:
+   sudo mv k9s /usr/local/bin/
 ```
-   sudo snap install core
+
+Potrebbe essere necessario aggiungere i permessi di esecuzione al binario K9s. Possiamo farlo con il comando:
 ```
-Per installare k9s, utilizza semplicemente il seguente comando:
+   sudo chmod +x /usr/local/bin/k9s
 ```
-   sudo snap install k9s
+
+Ora che K9s è installato, possiamo avviarlo eseguendo il comando:
 ```
+k9s
+```
+
 
 ### Grafana
 
