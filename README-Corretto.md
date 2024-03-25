@@ -265,7 +265,7 @@ Ora che K9s è installato, possiamo avviarlo eseguendo il comando:
 
 ### Grafana
 
-Installare su rasberry esterna al cluster come dashboard di monitoraggio.
+Installare su Raspberry esterna al cluster come dashboard di monitoraggio.
 ```
      sudo mkdir -p /etc/apt/keyrings/
 
