@@ -238,7 +238,7 @@ Installazione Helm (versione >= 3.14.3) sulla macchina:
 
 Dalla Raspberry, tramite terminale scarichiamo il file binario K9s per l'architettura ARM eseguendo il comando:
 ```
-wget https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_arm64.tar.gz
+    wget https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_arm64.tar.gz
 ```
 
 Dopo aver scaricato il file tar.gz, estrailo utilizzando il comando:
@@ -259,7 +259,7 @@ Potrebbe essere necessario aggiungere i permessi di esecuzione al binario K9s. P
 
 Ora che K9s è installato, possiamo avviarlo eseguendo il comando:
 ```
-k9s
+    k9s
 ```
 
 
