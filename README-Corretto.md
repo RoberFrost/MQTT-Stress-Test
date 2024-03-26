@@ -137,6 +137,41 @@ Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipa
 <ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
 
 
+Ora procederemo ad installare Mosquitto, broker MQTT che utilizzeremo per il caso di studio.
+
+Andremo nella cartella presente sulla nostra Raspberry *deployments/mosquitto* e avviaremo il comando di installazione dello script:
+
+```
+./install.sh
+```
+
+Nel caso eseguendo i comandi vengono restituiti degli errori riguardanti dei permessi negati, avviare il comando per abilitarli:
+
+```
+sudo chmod +x ./install.sh
+```
+
+Completata l'installazione, avremo installo il nostro broker MQTT.
+
+
+Ora andremo a configurare la dashboard di Grafana, con il nostro broker MQTT.
+
+Ci collegheremo all'interfaccia grafica di Grafana, raggiungibile tramite browser inserendo l'indirizzo IP della nostra Raspberry, nel nostro caso *192.168.1.70* seguito dalla porta di Grafana, cioè ":3000* .
+
+Dopo aver configurato i dati di accesso di Grafana, la prima volta che ci collegheremo all'interfaccia, procederemo a creare la dashboard.
+
+In alto cliccheremo sulla + e faremo click su "new dashboard", "add visualization", "configure a new data sources", "add new connection" e ricercheremo nel campo di ricerca "MQTT" e clicchiamo su di esso. Procediamo ad installare e ora possiamo ritornare alla schermata "add visualization" dove ora, nella lista dei "data sources" troveremo MQTT. Clicchiamo su di esso e procederemo a configurarlo.
+
+Come indirizzo IP, applicheremo l'indirizzo del nostro k3s, che nel nostro caso è "10.42.0.90", che potremmo reperirlo tramite k9s, accessibile da terminale.
+Mentre come porta di comunicazione, applicheremo la porta 8883 che è la porta di comunicazione di Mosquitto protetto da TLS.
+
+Quindi il campo Indirizzo IP sarà: 10.42.0.90:8883.
+
+Come "username" e "password" utilizzeremo quelli per accedere alla nostra Raspberry da terminale.
+
+Inseriti i dati, faremo click su "save e test" e se i dati sono corretti, Grafana ci restituirà un messaggio di conferma.
+
+
 
 
 
