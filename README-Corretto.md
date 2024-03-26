@@ -301,4 +301,25 @@ Uninstall command
 
 ### MQTT Mosquitto
 
-Open source MQTT broker. Progettato per il protocollo MQTT, un protocollo di messaggistica leggero per piccoli sensori e dispositivi mobili
+Open source MQTT broker. Progettato per il protocollo MQTT, un protocollo di messaggistica leggero per piccoli sensori e dispositivi mobili. Entrare nella cartella *deployments/mosquitto* presente nella nostra Raspberry, e avviare i seguenti comandi.
+
+Per installare:
+
+```
+    ./install.sh
+```
+
+Per disinstallare:
+
+```
+    ./install.sh rm
+```
+
+N.B. Nel caso eseguendo i comandi vengono restituiti degli errori riguardanti dei permessi negati, avviare il comando per abilitare i permessi:
+
+```
+sudo chmod +x ./install.sh
+```
+
+
+#Fine
