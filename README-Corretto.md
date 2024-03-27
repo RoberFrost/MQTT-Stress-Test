@@ -169,7 +169,7 @@ Quindi il campo Indirizzo IP sarà: 10.42.0.90:8883.
 
 Come "username" e "password" utilizzeremo quelli per accedere alla nostra Raspberry da terminale.
 
-Inseriti i dati, faremo click su "save e test" e se i dati sono corretti, Grafana ci restituirà un messaggio di conferma.
+Inseriti i dati, faremo click su *"save e test"* e se i dati sono corretti, Grafana ci restituirà un messaggio di conferma.
 
 
 
