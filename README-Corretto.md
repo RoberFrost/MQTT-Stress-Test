@@ -317,8 +317,8 @@ Installare su Raspberry esterna al cluster come dashboard di monitoraggio.
      sudo /bin/systemctl start grafana-server
  
 ``` 
-Verificare il corretto funzionamento aprendo il proprio browser, digitando "<ipaddress>:3000"
-<ipaddress> sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
+Verificare il corretto funzionamento aprendo il proprio browser, digitando "< ipaddress >:3000"
+< ipaddress > sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
 
 
 ### TimescaleDB
