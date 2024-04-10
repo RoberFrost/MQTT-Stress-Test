@@ -93,13 +93,13 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
-Completata l'installazione di Helm, procediamo al prossimo prerequisito, TimescaleDB.
+Completata l'installazione di Helm, procediamo al prossimo prerequisito, InfluxDB.
 
-TimescaleDB è un database di serie temporali open-source progettato per gestire in modo efficiente grandi volumi di dati temporali. Offre caratteristiche avanzate come l'architettura scalabile, la compressione dei dati, il partizionamento automatico e il supporto per dati geospaziali. 
+InfluxDB è un database di serie temporali open-source progettato per gestire in modo efficiente grandi volumi di dati temporali. Offre caratteristiche avanzate come l'architettura scalabile, la compressione dei dati, il partizionamento automatico e il supporto per dati geospaziali. 
 
 ###  ❓ BISOGNA RIPORTARE ANCHE LO SCRIPT?? ❓
 
-Avvieremo il comando di installazione dello script del database, entrando innanzitutto nella directory **"deployments/timescaledb"** e avviando il comando:
+Avvieremo il comando di installazione dello script del database, entrando innanzitutto nella directory **"deployments/influxDB"** e avviando il comando:
 ``` 
     ./install.sh
 ```
