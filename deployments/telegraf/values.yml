@@ -99,15 +99,15 @@ config:
     logfile: ""
     hostname: "$HOSTNAME"
     omit_hostname: false
-  # outputs:
-    # - influxdb:
-    #     urls:
-    #       - "http://influxdb.influxdb.svc:8086"
-    #     database: "telegraf"
-    #     retention_policy: ""
-    #     timeout: "5s"
-    #     username: "admin"
-    #     password: "admin1234!"
-    #     user_agent: "telegraf"
-    #     insecure_skip_verify: false
+  outputs:
+ - influxdb:
+      urls:
+        - "http://influxdb.influxdb.svc:8086"
+      database: "telegraf"
+      retention_policy: ""
+      timeout: "5s"
+      username: "admin"
+      password: "admin1234!"
+      user_agent: "telegraf"
+      insecure_skip_verify: false
   monitor_self: false
