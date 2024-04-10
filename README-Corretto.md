@@ -258,6 +258,28 @@ oppure:
 sudo k3s kubectl get node
 ```
 
+## Installazione K9s
+
+```
+wget https://github.com/derailed/k9s/releases/download/v0.32.4/k9s_Linux_arm64.tar.gz
+```
+
+```
+tar -xzvf k9s_Linux_arm64.tar.gz
+```
+
+```
+tar -xzvf k9s_Linux_arm64.tar.gz
+```
+
+```
+sudo mv k9s /usr/local/bin/
+```
+
+```
+sudo chmod +x /usr/local/bin/k9s
+```
+
 # TOOLS
 
 - Mosquitto
