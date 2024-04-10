@@ -104,7 +104,7 @@ Avvieremo il comando di installazione dello script del database, entrando innanz
     ./install.sh
 ```
 
-Lo script installerà semplicemente un namespace che si chiamerà, appunto, "influxdb" e poi tramite il prerequisito precedentemente installato, Helm, andrà ad installare sul nostro sistema tutti i dati e componenti necessari per il funzionamento del tool.
+Lo script installerà semplicemente un namespace che si chiamerà, appunto, "influxdb" e poi tramite il prerequisito precedentemente installato, Helm, andrà ad installare sul nostro sistema tutti i file e componenti necessari per il funzionamento del tool.
 
 
 Completata l'installazione, procediamo al prossimo plugin.
