@@ -256,7 +256,7 @@ sudo k3s kubectl get node
 
 - Mosquitto
 - Telegraf
-- TimescaleDB
+- InfluxDB
 - Grafana
 
 
@@ -321,9 +321,9 @@ Verificare il corretto funzionamento aprendo il proprio browser, digitando "< ip
 < ipaddress > sarebbe l'indirizzo IP che assume il dispositivo sulla rete.
 
 
-### TimescaleDB
+### InfluxDB
 
-Database noSQL timeseries. Entrare nella cartella *deployments/timescaledb* ed eseguire i seguenti comandi:
+Database noSQL timeseries. Entrare nella cartella *deployments/influxdb* ed eseguire i seguenti comandi:
 
 Install command
 ``` 
