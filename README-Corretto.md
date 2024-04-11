@@ -112,7 +112,7 @@ Completata l'installazione, procediamo al prossimo plugin.
 
 Ora andremo ad installare Telegraf, agente open source di raccolta e invio di metriche. Inoltre, è un agente leggero e versatile che può essere utilizzato in una varietà di ambienti. 
 
-Andremo ad eseguire il comando per l'installazione, contenuto nel percorso **deployments/telegraf** :
+Andremo ad eseguire il comando per l'installazione, contenuto nel percorso **"deployments/telegraf"** :
 
 ```
     ./install.sh
