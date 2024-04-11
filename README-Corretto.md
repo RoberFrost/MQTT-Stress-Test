@@ -402,4 +402,19 @@ sudo chmod +x ./install.sh
 
 Il seguente comando, come quelli precedenti, andranno ad installare i file e tutte le configurazioni necessarie per il corretto funzionamento del tool.
 
-# Fine
+# JMETER
+
+Donwload di JMETER per i test di carico
+https://jmeter.apache.org/download_jmeter.cgi
+
+Download del plugin mqtt. Click su "mqtt-xmeter-2.0.2-jar-with-dependencies.jar"
+https://github.com/emqx/mqtt-jmeter/releases
+
+
+copiare il jar del plugin all'interno della cartella dove si è estratto JMeter3.2 ( $JMETER_HOME )
+al seguente path **lib/ext**.
+
+avviare la ui dalla cartella bin/ApacheJMeter.jar dentro $JMETER_HOME 
+
+( documentazione associata )
+https://opensource.com/article/23/1/mqtt-plug-in-jmeter
