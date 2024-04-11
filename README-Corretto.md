@@ -171,6 +171,11 @@ Anche in questo caso, lo script andrà ad installare un namespace che si chiamer
 Completata l'installazione, avremo installo il nostro broker MQTT.
 
 
+Interfaccia per verificare code mttq
+https://github.com/fabaff/mqtt-panel
+
+
+
 Ora andremo a configurare la dashboard di Grafana, con il nostro broker MQTT.
 
 Ci collegheremo all'interfaccia grafica di Grafana, raggiungibile tramite browser inserendo l'indirizzo IP della nostra Raspberry, nel nostro caso *192.168.1.70* seguito dalla porta di Grafana, cioè ":3000* .
