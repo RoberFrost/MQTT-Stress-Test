@@ -104,10 +104,21 @@ Avvieremo il comando di installazione dello script del database, entrando innanz
     ./install.sh
 ```
 
-Lo script installerà semplicemente un namespace che si chiamerà, appunto, "influxdb" e poi tramite il prerequisito precedentemente installato, Helm, andrà ad installare sul nostro sistema tutti i file e componenti necessari per il funzionamento del tool.
+Lo script installerà semplicemente un namespace che si chiamerà, appunto, "influxdb" e poi tramite il prerequisito precedentemente installato, Helm, andrà ad installare sul nostro sistema i "chart", contenenti i file e le configurazioni necessarie per il funzionamento del tool.
 
 
 Completata l'installazione, procediamo al prossimo plugin.
+
+
+Ora andremo ad installare Telegraf, agente open source di raccolta e invio di metriche. Inoltre, è un agente leggero e versatile che può essere utilizzato in una varietà di ambienti. 
+
+Andremo ad eseguire il comando per l'installazione, contenuto nel percorso **deployments/telegraf** :
+
+```
+    ./install.sh
+```
+
+Come quelli utilizzati precedentemente, anche questo comando andrà ad importare ed installare i "chart" contenenti tutti i file e le configurazione per il corretto funzionamento del tool.
 
 
 ### Ora andremo ad installare Grafana, dashboard per la visualizzazione dei dati raccolti.
@@ -384,5 +395,6 @@ N.B. Nel caso eseguendo i comandi vengono restituiti degli errori riguardanti de
 sudo chmod +x ./install.sh
 ```
 
+Il seguente comando, come quelli precedenti, andranno ad installare i file e tutte le configurazioni necessarie per il corretto funzionamento del tool.
 
 # Fine
