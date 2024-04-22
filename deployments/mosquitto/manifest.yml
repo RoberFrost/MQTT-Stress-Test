@@ -48,10 +48,17 @@ data:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mosquitto-mqtts
+  name: mosquitto
 spec:
-  type: ClusterIP
   selector:
-    app: mosquitto  
+    app: mosquitto
+  type: ClusterIP
+  sessionAffinity: None
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
   ports:
-  - port: 8883
+  - name: mosquitto
+    protocol: TCP
+    port: 1883
+    targetPort: 1883

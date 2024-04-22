@@ -99,15 +99,29 @@ config:
     logfile: ""
     hostname: "$HOSTNAME"
     omit_hostname: false
+  inputs:
+  - mqtt_consumer:
+      servers: 
+        - "tcp://mosquitto.mosquitto.svc:1883"
+      topics: 
+        - "telegraf/host01/cpu"
+        - "telegraf/+/mem"
+        - "sensors/#"
+      data_format: "influx"
   outputs:
- - influxdb:
+  - influxdb_v2:
       urls:
         - "http://influxdb.influxdb.svc:8086"
-      database: "telegraf"
-      retention_policy: ""
+      # database: "primary"
+      organization: "primary"
+        ## Destination bucket to write into.
+      bucket: "primary"
+      token: LLlmrybrczl2NTZug4zn
+      # retention_policy: ""
       timeout: "5s"
-      username: "admin"
-      password: "admin1234!"
+      # username: "admin"
+      # password: "admin1234!"
       user_agent: "telegraf"
       insecure_skip_verify: false
   monitor_self: false
+  docker_endpoint: ""
