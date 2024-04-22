@@ -15,9 +15,16 @@ function create(){
     popd > /dev/null
 }
 
+function get_node_port(){
+    kubectl -n mosquitto get service mosquitto -o=jsonpath='{.spec.ports[0].nodePort}{"\n"}' 
+}
+
 case $1 in
     rm)
         delete
+    ;;
+    nodeport)
+        get_node_port
     ;;
     *)
         create

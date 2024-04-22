@@ -16,7 +16,6 @@ spec:
       - name: mosquitto
         image: eclipse-mosquitto:2.0.18
         ports:
-        - containerPort: 8883
         - containerPort: 1883
         - containerPort: 9001
         volumeMounts:
@@ -52,7 +51,7 @@ metadata:
 spec:
   selector:
     app: mosquitto
-  type: ClusterIP
+  type: NodePort
   sessionAffinity: None
   sessionAffinityConfig:
     clientIP:

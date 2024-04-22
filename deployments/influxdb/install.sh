@@ -14,9 +14,16 @@ function create(){
     popd > /dev/null
 }
 
+function get_admin_token(){
+    kubectl get secret influxdb -o "jsonpath={.data['admin-user-token']}" --namespace influxdb | base64 --decode
+}
+
 case $1 in
     rm)
         delete
+    ;;
+    token)
+        get_admin_token
     ;;
     *)
         create

@@ -107,7 +107,7 @@ config:
         - "telegraf/host01/cpu"
         - "telegraf/+/mem"
         - "sensors/#"
-      data_format: "influx"
+      data_format: "json"
   outputs:
   - influxdb_v2:
       urls:
@@ -116,7 +116,7 @@ config:
       organization: "primary"
         ## Destination bucket to write into.
       bucket: "primary"
-      token: LLlmrybrczl2NTZug4zn
+      token: REHCeGt4mzy8MRY1NSPx
       # retention_policy: ""
       timeout: "5s"
       # username: "admin"
